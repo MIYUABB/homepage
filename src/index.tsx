@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 let body = document.querySelector("body")
 
 root.render(
-  <App />
+    <App />
 );
 
 

@@ -5,6 +5,7 @@ import Introduction from "../comoponents/introduction";
 import Quote from "../comoponents/quote";
 
 function Home() {
+    document.title = 'Cyril Llopis'
     return (
         <div className="flex flex-col bg-body-col">
             <Navbar />

@@ -5,6 +5,7 @@ import Introduction from "../comoponents/introduction";
 import Article from "../comoponents/article";
 
 function Career() {
+    document.title = 'Cyril Llopis : Career'
     return (
         <div className='flex flex-col min-h-screen bg-body-col'>
             <Navbar />

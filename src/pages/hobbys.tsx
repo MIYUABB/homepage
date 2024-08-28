@@ -6,7 +6,7 @@ import Introduction from "../comoponents/introduction";
 
 function Home() {
     return (
-        <div className="flex flex-col min-h-screen bg-body-col">
+        <div className="flex flex-col min-h-screen bg-body-col ">
             <Navbar />
             <Introduction title="Hobbys" img="Boulderwall.jpeg" alt="Bouldering wall" bg={true}/>
             <Article title="Bouldern/Klettern" text="Die Leidenschaft fürs Bouldern und Klettern habe ich vor etwa 2 Jahren für mich entdeckt. Seither gehe ich grundsätzlich 3 bis 4 mal die Woche in die Kletterhalle. Das Klettern ist für mich die perfekte abwechslung zum schulischen Alltag. Momentan bin ich auf einem 6c/7a Niveau." img="Bouldering_square.jpg" imgleft={true} alt="Boulderin"/>

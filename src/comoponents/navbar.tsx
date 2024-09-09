@@ -1,19 +1,30 @@
-import React from "react"
+import React, {useState} from "react"
 
 
 
-function ActivateMenu(){
-    let navigation = document.querySelector("#navigation")
-    if (navigation!.className === "invisible"){
-        console.log("yes")
-        navigation!.className = "visible"
-    } else {
-        console.log("no")
-        navigation!.className = "invisible"
-    }
-}
+
 function Navbar(this: any) {
+    const [activated, setActivated] = useState(true)
+    const [dropdownState, changeState] = useState(true)
+    function activateMenu(){
+        console.log("active")
+        let navigation = document.querySelector("#navigation")
+        if (activated){
+            if (dropdownState){
+                console.log("on")
+                navigation!.className = "visible"
+                changeState(false)
+            } else {
+                console.log("off")
+                navigation!.className = "invisible"
+                changeState(true)
+            }
+            setActivated(false)
+        } else {
+            setActivated(true)
+        }
 
+    }
 
     if (window.innerWidth > 680){
         return(
@@ -35,7 +46,7 @@ function Navbar(this: any) {
                 <h1 className="pl-4 place-self-center opacity-80 w-fit text-7xl text-text-col font-sans hover:opacity-100 hover:text-title-col">
                     <a href="/" className="">Cyril</a>
                 </h1>
-                <button onClick={ActivateMenu} className="absolute right-4 place-self-center">
+                <button onClick={activateMenu} className="absolute right-4 place-self-center">
                     <label>
                         <div className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center">
                             <input className="hidden peer" type="checkbox" />

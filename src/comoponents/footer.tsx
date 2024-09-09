@@ -11,7 +11,7 @@ function Footer() {
             <div className="m-auto">
                 <h6 className="underline decoration-double text-lg text-title-col">Website</h6>
                 <a className="hover:underline" href="/">Start</a><br/>
-                <a className="hover:underline" href="/src/pages/career">Über mich</a><br/>
+                <a className="hover:underline" href="/career">Über mich</a><br/>
                 <a className="hover:underline" href="/hobbys">Hobbys</a>
             </div>
         </footer>

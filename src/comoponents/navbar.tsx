@@ -7,15 +7,12 @@ function Navbar(this: any) {
     const [activated, setActivated] = useState(true)
     const [dropdownState, changeState] = useState(true)
     function activateMenu(){
-        console.log("active")
         let navigation = document.querySelector("#navigation")
         if (activated){
             if (dropdownState){
-                console.log("on")
                 navigation!.className = "visible"
                 changeState(false)
             } else {
-                console.log("off")
                 navigation!.className = "invisible"
                 changeState(true)
             }
@@ -42,7 +39,7 @@ function Navbar(this: any) {
         )
     } else {
         return (
-            <div className="z-50 flex absolute w-11/12 h-32 place-self-center my-8 bg-gradient-to-r bg-opacity-70 from-shade-primary via-shade-secondary to-shade-primary p-4 rounded">
+            <div id="navbar" className="z-50 flex absolute w-11/12 h-32 place-self-center my-8 bg-gradient-to-r bg-opacity-70 from-shade-primary via-shade-secondary to-shade-primary p-4 rounded">
                 <h1 className="pl-4 place-self-center opacity-80 w-fit text-7xl text-text-col font-sans hover:opacity-100 hover:text-title-col">
                     <a href="/" className="">Cyril</a>
                 </h1>
@@ -57,10 +54,10 @@ function Navbar(this: any) {
                     </label>
                 </button>
                 <div id="navigation" className="invisible">
-                    <nav className="text-text-col">
-                        <a href="/" className="p-2 hover:opacity-100 hover:underline opacity-80">Startseite</a>
-                        <a href="/career" className="p-2 hover:opacity-100 hover:underline opacity-80">Werdegang</a>
-                        <a href="/hobbys" className="p-2 hover:opacity-100 hover:underline opacity-80">Hobbys</a>
+                    <nav className="text-text-col text-2xl flex flex-col absolute top-32 end-0 bg-shade-primary bg-gradient-to-r bg-opacity-70 from-shade-secondary to-shade-primary rounded">
+                        <a href="/" className="p-2 hover:opacity-100 hover:underline opacity-80 border-b">Startseite</a>
+                        <a href="/career" className="p-2 hover:opacity-100 hover:underline opacity-80 border-b">Werdegang</a>
+                        <a href="/hobbys" className="p-2 hover:opacity-100 hover:underline opacity-80 border-b">Hobbys</a>
                         <a href="https://github.com/MIYUABB?tab=repositories"
                            className="p-2 hover:opacity-100 hover:underline opacity-80" target="_blank"
                            rel="noreferrer">GitHub</a>

@@ -54,7 +54,7 @@ function Navbar(this: any) {
                     </label>
                 </button>
                 <div id="navigation" className="invisible">
-                    <nav className="text-text-col text-2xl flex flex-col absolute top-32 end-0 bg-shade-primary bg-gradient-to-r bg-opacity-70 from-shade-secondary to-shade-primary rounded">
+                    <nav className="z-50 text-text-col text-2xl flex flex-col absolute top-32 end-0 bg-shade-primary bg-gradient-to-r bg-opacity-70 from-shade-secondary to-shade-primary rounded">
                         <a href="/" className="p-2 hover:opacity-100 hover:underline opacity-80 border-b">Startseite</a>
                         <a href="/career" className="p-2 hover:opacity-100 hover:underline opacity-80 border-b">Werdegang</a>
                         <a href="/hobbys" className="p-2 hover:opacity-100 hover:underline opacity-80 border-b">Hobbys</a>
